@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Stash: The ultimate guide.</title>
+</head>
+<body>
+<h1>Stash: The ultimate guide.</h1>
+
+<p>Stash is a new concept in data storage.  It 
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#projgoals">Goals of the Stash Project</a></li>
+  <li><a href="#diff_sql">Different to SQL</a></li>
+  <li><a href="#diff_nosql">Different to other Non-SQL systems</a></li>
+</ul>
+
+
+<a name="intro">
+<h2>Introduction</h2>
+
+<p>Stash was specifically designed to provide a data storage system suitable for modern websites that need to quickly provide a large amount of small chunks of data.</p>
+
+<p>Websites are normally developed very fluidly.  The data storage system needs to be flexible, and easy to use.</p>
+
+<a name="projgoals">
+<h2>Goals of the Stash Project</h2>
+
+<p>When designing and developing Stash, there were some specific goals in mind:</p>
+<ul>
+  <li><b>100% uptime</b> - Aside from undetected bugs, the database needs to be up all the time, even when changes need to be made to the database software and libraries themselves.</li>
+  <li><b>Automatic Replication</b> - Changes made on the master automatically get replicated to slave servers.</li>
+  <li><b>Master and slave ignorant</b> - The client connects to a server, but doesn't know or care if it is a master or a slave.  If it makes any requests that only a master can do, the slave will send the request on.</li>
+  <li><b>Type Agnostic</b> - Didn't want to be tied to a particular data-type for a column, if we decide that we need to store a string instead of an integer, we can do so.</li>
+</ul>
+
+<a name="diff_sql">
+<h2>Different to SQL</h2>
+
+<p>Stash is a lot different to MySQL, Oracle and other SQL-like databases.  
+
+<a name="diff_nosql">
+<h2>Different to other Non-SQL systems.</h2>
+
+<a name="features">
+<h2>Features</h2>
+
+
+<p>
+	The AUTO value.  In SQL it is common to allow key columns to auto-increment the value.   This is a useful unique ID generator.  With Stash, you can indicate that an automatic number be generated.  THe advantage is that when using a single table with content-named rows, you can generate a unique id on the key, even though different types of data is being stored.  This allows a certain flexibility that was not possible before.
+</p>
+
+
+
+</body>
+</html>
